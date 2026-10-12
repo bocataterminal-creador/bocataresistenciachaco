@@ -104,10 +104,22 @@
   function renderBusinessData() {
     const address = document.querySelector("[data-address]");
     const phone = document.querySelector("[data-phone]");
+    const email = document.querySelector("[data-email-link]");
+    const emailFooter = document.querySelector("[data-email-footer]");
     const instagram = document.querySelector("[data-instagram-label]");
     if (address) address.textContent = config.address || "Próximamente";
     if (phone) phone.textContent = config.phone || "Próximamente";
-    if (instagram) instagram.textContent = config.instagramHandle || "Próximamente";
+    [email, emailFooter].forEach((link) => {
+      if (!link) return;
+      link.textContent = link === email ? (config.email || "Próximamente") : "Email";
+      if (config.email) link.href = `mailto:${config.email}`;
+      else link.removeAttribute("href");
+    });
+    if (instagram) {
+      instagram.textContent = config.instagramHandle || "Próximamente";
+      if (config.instagramUrl) instagram.href = config.instagramUrl;
+      else instagram.removeAttribute("href");
+    }
 
     const map = document.querySelector("[data-map]");
     if (map && config.googleMapsEmbedUrl) {

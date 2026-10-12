@@ -184,6 +184,7 @@ h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }
 .contact-list div:last-child { border-bottom: 1px solid var(--color-border); }
 .contact-list dt { color: var(--color-text-soft); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; }
 .contact-list dd { margin: 0; }
+.contact-list a { color: inherit; text-underline-offset: 0.2em; }
 .map-placeholder { display: grid; min-height: 23rem; place-content: center; padding: 2rem; border-radius: var(--radius-lg); background: repeating-linear-gradient(-35deg, #dde0d1 0 2rem, #e8dfd0 2rem 4rem); text-align: center; }
 .map-placeholder.has-map { display: block; padding: 0; overflow: hidden; background: var(--color-surface-alt); }
 .map-placeholder iframe { display: block; width: 100%; min-height: 23rem; height: 100%; border: 0; }

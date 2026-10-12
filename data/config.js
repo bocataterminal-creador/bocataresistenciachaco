@@ -11,10 +11,10 @@ window.BOCATA_CONFIG = {
   address: "Av. M. Moreno 89, H3500BAN Resistencia, Chaco, Argentina",
   phone: "+54 9 362 405-6624",
   whatsapp: "5493624056624",
+  email: "bocataterminal@gmail.com",
 
-  // TODO: reemplazar por dato real.
-  instagramUrl: "",
-  instagramHandle: "",
+  instagramUrl: "https://www.instagram.com/bocataresistencia/",
+  instagramHandle: "@bocataresistencia",
   googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Av.%20M.%20Moreno%2089%2C%20H3500BAN%20Resistencia%2C%20Chaco%2C%20Argentina",
   googleMapsEmbedUrl: "https://www.google.com/maps?q=Av.%20M.%20Moreno%2089%2C%20H3500BAN%20Resistencia%2C%20Chaco%2C%20Argentina&output=embed",
   googleReviewsUrl: "",

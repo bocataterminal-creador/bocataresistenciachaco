@@ -87,6 +87,7 @@ window.BOCATA_CONFIG = {
   address: "",
   phone: "",
   whatsapp: "",
+  email: "",
   instagramUrl: "",
   instagramHandle: "",
   googleMapsUrl: "",
