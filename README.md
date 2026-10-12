@@ -41,6 +41,7 @@ El nombre y el isotipo tipográfico provisorio aparecen en `index.html`. Cuando 
 - Productos y promociones: cargá las imágenes en `assets/images/` y actualizá el campo `image` correspondiente en `data/menu.js`.
 - Historia: reemplazá las rutas de las tres imágenes dentro de la sección `#bocata` en `index.html`.
 - Galería: editá `GALLERY_DATA` en `data/menu.js`. Puede contener entre 6 y 12 elementos sin cambiar la lógica.
+- Videos: editá `VIDEO_DATA` en `data/menu.js`. Los reproductores de Google Vids se cargan sólo cuando el visitante pulsa “Reproducir video”.
 
 Para producción conviene usar imágenes WebP o AVIF optimizadas. Mantené `object-fit: cover` para evitar deformaciones.
 

@@ -134,3 +134,18 @@ window.GALLERY_DATA = [
   { src: "assets/images/gallery-05.svg", alt: "Espacio reservado para una fotografía de un producto de Bocata", caption: "Hecho para disfrutar" },
   { src: "assets/images/gallery-06.svg", alt: "Espacio reservado para una fotografía de detalles de Bocata", caption: "Detalles de la casa" }
 ];
+
+window.VIDEO_DATA = [
+  {
+    id: "promocional-1",
+    title: "Video promocional 1",
+    description: "Conocé la propuesta de Bocata.",
+    url: "https://docs.google.com/videos/d/1f62nMlXPK6aPzXO-xP6VyX21yDAuSSIKFnjPmTyWME8/play"
+  },
+  {
+    id: "promocional-2",
+    title: "Video promocional 2",
+    description: "Del freezer a tu mesa.",
+    url: "https://docs.google.com/videos/d/15MPoR8sUssRMLdQiSdwxBsrh85l-fTNOdU8_W_Gjy9M/play"
+  }
+];

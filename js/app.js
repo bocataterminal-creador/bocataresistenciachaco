@@ -8,6 +8,7 @@
   const categories = Array.isArray(window.MENU_CATEGORIES) ? window.MENU_CATEGORIES : [];
   const promos = Array.isArray(window.PROMO_DATA) ? window.PROMO_DATA : [];
   const gallery = Array.isArray(window.GALLERY_DATA) ? window.GALLERY_DATA : [];
+  const videos = Array.isArray(window.VIDEO_DATA) ? window.VIDEO_DATA : [];
 
   const categoryLabel = (categoryId) => categories.find((item) => item.id === categoryId)?.label || categoryId;
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[character]);
@@ -80,6 +81,24 @@
         <img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy" width="900" height="700">
         <span class="gallery-caption">${escapeHtml(item.caption)}</span>
       </button>`).join("");
+  }
+
+  function renderVideos() {
+    const grid = document.querySelector("[data-video-grid]");
+    if (!grid) return;
+    grid.innerHTML = videos.map((video) => `
+      <article class="video-card reveal">
+        <div class="video-player" data-video-player="${escapeHtml(video.id)}">
+          <button class="video-placeholder" type="button" data-video-play="${escapeHtml(video.id)}" aria-label="Reproducir ${escapeHtml(video.title)}">
+            <span class="video-play-icon" aria-hidden="true">▶</span>
+            <span>Reproducir video</span>
+          </button>
+        </div>
+        <div class="video-body">
+          <div><h3>${escapeHtml(video.title)}</h3><p>${escapeHtml(video.description)}</p></div>
+          <a href="${escapeHtml(video.url)}" target="_blank" rel="noopener noreferrer">Abrir en Google Vids <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>`).join("");
   }
 
   function renderBusinessData() {
@@ -158,6 +177,14 @@
 
       const galleryButton = event.target.closest("[data-gallery-index]");
       if (galleryButton) openLightbox(Number(galleryButton.dataset.galleryIndex));
+
+      const videoButton = event.target.closest("[data-video-play]");
+      if (videoButton) {
+        const video = videos.find((item) => item.id === videoButton.dataset.videoPlay);
+        const player = videoButton.closest("[data-video-player]");
+        if (!video || !player) return;
+        player.innerHTML = `<iframe src="${escapeHtml(video.url)}" title="${escapeHtml(video.title)}" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+      }
     });
   }
 
@@ -243,6 +270,7 @@
   renderFilters();
   renderMenu();
   renderPromos();
+  renderVideos();
   renderGallery();
   renderBusinessData();
   bindDelegatedActions();
