@@ -90,6 +90,14 @@
     if (phone) phone.textContent = config.phone || "Próximamente";
     if (instagram) instagram.textContent = config.instagramHandle || "Próximamente";
 
+    const map = document.querySelector("[data-map]");
+    if (map && config.googleMapsEmbedUrl) {
+      map.classList.add("has-map");
+      map.removeAttribute("role");
+      map.removeAttribute("aria-label");
+      map.innerHTML = `<iframe title="Mapa de Bocata en ${escapeHtml(config.address)}" src="${escapeHtml(config.googleMapsEmbedUrl)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>`;
+    }
+
     const hours = document.querySelector("[data-hours]");
     if (hours && config.openingHours) {
       hours.innerHTML = Object.entries(config.openingHours).map(([day, value]) => `<div><dt>${escapeHtml(day)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("");

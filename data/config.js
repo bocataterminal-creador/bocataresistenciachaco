@@ -8,13 +8,15 @@ window.BOCATA_CONFIG = {
   province: "Chaco",
   country: "Argentina",
 
+  address: "Av. M. Moreno 89, H3500BAN Resistencia, Chaco, Argentina",
+  phone: "+54 9 362 405-6624",
+  whatsapp: "5493624056624",
+
   // TODO: reemplazar por dato real.
-  address: "",
-  phone: "",
-  whatsapp: "",
   instagramUrl: "",
   instagramHandle: "",
-  googleMapsUrl: "",
+  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Av.%20M.%20Moreno%2089%2C%20H3500BAN%20Resistencia%2C%20Chaco%2C%20Argentina",
+  googleMapsEmbedUrl: "https://www.google.com/maps?q=Av.%20M.%20Moreno%2089%2C%20H3500BAN%20Resistencia%2C%20Chaco%2C%20Argentina&output=embed",
   googleReviewsUrl: "",
 
   // TODO: reemplazar por horarios reales. La lógica “abierto ahora” permanece desactivada.
@@ -28,5 +30,5 @@ window.BOCATA_CONFIG = {
     Domingo: "--"
   },
 
-  orderMessage: "Hola, quiero hacer un pedido en Bocata."
+  orderMessage: "Hola, quiero realizar un pedido en Bocata."
 };
