@@ -77,16 +77,20 @@
       </a>
     </section>
 
-    <section class="section" id="favoritos" aria-labelledby="favoritos-title">
+    <section class="section accordion-section" id="favoritos" aria-labelledby="favoritos-title">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Para empezar</p>
-            <h2 id="favoritos-title">Los favoritos de Bocata</h2>
+        <details class="section-accordion" data-accordion>
+          <summary class="accordion-summary reveal">
+            <h2 id="favoritos-title">
+              <span class="accordion-eyebrow">Para empezar</span>
+              <span class="accordion-heading-row"><span>Los favoritos de Bocata</span><span class="accordion-icon" aria-hidden="true"></span></span>
+            </h2>
+          </summary>
+          <div class="accordion-panel">
+            <p class="accordion-intro">Una muestra provisoria para evaluar cómo se presentarán los productos más elegidos.</p>
+            <div class="product-grid featured-grid" data-featured-grid aria-live="polite"></div>
           </div>
-          <p>Una muestra provisoria para evaluar cómo se presentarán los productos más elegidos.</p>
-        </div>
-        <div class="product-grid featured-grid" data-featured-grid aria-live="polite"></div>
+        </details>
       </div>
     </section>
 
@@ -106,16 +110,20 @@
       </div>
     </section>
 
-    <section class="section promo-section" id="promos" aria-labelledby="promos-title">
+    <section class="section promo-section accordion-section" id="promos" aria-labelledby="promos-title">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Algo especial</p>
-            <h2 id="promos-title">Promos Bocata</h2>
+        <details class="section-accordion" data-accordion>
+          <summary class="accordion-summary reveal">
+            <h2 id="promos-title">
+              <span class="accordion-eyebrow">Algo especial</span>
+              <span class="accordion-heading-row"><span>Promos Bocata</span><span class="accordion-icon" aria-hidden="true"></span></span>
+            </h2>
+          </summary>
+          <div class="accordion-panel">
+            <p class="accordion-intro">Combinaciones provisorias listas para reemplazar por las promociones vigentes.</p>
+            <div class="promo-grid" data-promo-grid></div>
           </div>
-          <p>Combinaciones provisorias listas para reemplazar por las promociones vigentes.</p>
-        </div>
-        <div class="promo-grid" data-promo-grid></div>
+        </details>
       </div>
     </section>
 
@@ -144,73 +152,93 @@
       </div>
     </section>
 
-    <section class="section story-section" id="bocata" aria-labelledby="story-title">
-      <div class="container story-layout">
-        <div class="story-copy reveal">
-          <p class="eyebrow">Nuestra esencia</p>
-          <h2 id="story-title">Esto es Bocata</h2>
-          <p>Bocata es una propuesta gastronómica en Resistencia pensada para facilitarte la vida con comida cocinada, congelada y envasada al vacío.</p>
-          <p>Nuestras opciones están preparadas para que puedas conservarlas en el freezer y disfrutarlas cuando las necesites, con la practicidad de tener una comida lista a mano.</p>
-          <p>Del freezer a tu mesa: una forma simple de resolver tus comidas y seguir disfrutando sabores abundantes y buena cocina.</p>
-        </div>
-        <div class="story-collage reveal" aria-label="Espacios reservados para fotografías del local, el equipo y la cocina">
-          <figure class="story-photo story-photo-main">
-            <img src="assets/images/place-placeholder.svg" alt="Espacio reservado para una fotografía del local" loading="lazy" width="900" height="1100">
-            <figcaption>El local</figcaption>
-          </figure>
-          <figure class="story-photo">
-            <img src="assets/images/team-placeholder.svg" alt="Espacio reservado para una fotografía del equipo" loading="lazy" width="700" height="500">
-            <figcaption>El equipo</figcaption>
-          </figure>
-          <figure class="story-photo">
-            <img src="assets/images/kitchen-placeholder.svg" alt="Espacio reservado para una fotografía de la cocina" loading="lazy" width="700" height="500">
-            <figcaption>La cocina</figcaption>
-          </figure>
-        </div>
+    <section class="section story-section accordion-section" id="bocata" aria-labelledby="story-title">
+      <div class="container">
+        <details class="section-accordion" data-accordion>
+          <summary class="accordion-summary reveal">
+            <h2 id="story-title">
+              <span class="accordion-eyebrow">Nuestra esencia</span>
+              <span class="accordion-heading-row"><span>Esto es Bocata</span><span class="accordion-icon" aria-hidden="true"></span></span>
+            </h2>
+          </summary>
+          <div class="accordion-panel story-layout">
+            <div class="story-copy reveal">
+              <p>Bocata es una propuesta gastronómica en Resistencia pensada para facilitarte la vida con comida cocinada, congelada y envasada al vacío.</p>
+              <p>Nuestras opciones están preparadas para que puedas conservarlas en el freezer y disfrutarlas cuando las necesites, con la practicidad de tener una comida lista a mano.</p>
+              <p>Del freezer a tu mesa: una forma simple de resolver tus comidas y seguir disfrutando sabores abundantes y buena cocina.</p>
+            </div>
+            <div class="story-collage reveal" aria-label="Espacios reservados para fotografías del local, el equipo y la cocina">
+              <figure class="story-photo story-photo-main">
+                <img src="assets/images/place-placeholder.svg" alt="Espacio reservado para una fotografía del local" loading="lazy" width="900" height="1100">
+                <figcaption>El local</figcaption>
+              </figure>
+              <figure class="story-photo">
+                <img src="assets/images/team-placeholder.svg" alt="Espacio reservado para una fotografía del equipo" loading="lazy" width="700" height="500">
+                <figcaption>El equipo</figcaption>
+              </figure>
+              <figure class="story-photo">
+                <img src="assets/images/kitchen-placeholder.svg" alt="Espacio reservado para una fotografía de la cocina" loading="lazy" width="700" height="500">
+                <figcaption>La cocina</figcaption>
+              </figure>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
 
-    <section class="section video-section" id="videos" aria-labelledby="videos-title">
+    <section class="section video-section accordion-section" id="videos" aria-labelledby="videos-title">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow light">Bocata en movimiento</p>
-            <h2 id="videos-title">Conocé nuestra propuesta</h2>
+        <details class="section-accordion" data-accordion>
+          <summary class="accordion-summary reveal">
+            <h2 id="videos-title">
+              <span class="accordion-eyebrow">Bocata en movimiento</span>
+              <span class="accordion-heading-row"><span>Conocé nuestra propuesta</span><span class="accordion-icon" aria-hidden="true"></span></span>
+            </h2>
+          </summary>
+          <div class="accordion-panel">
+            <p class="accordion-intro">Dos videos para descubrir de cerca cómo llevamos comida cocinada, congelada y envasada al vacío del freezer a tu mesa.</p>
+            <div class="video-grid" data-video-grid></div>
           </div>
-          <p>Dos videos para descubrir de cerca cómo llevamos comida cocinada, congelada y envasada al vacío del freezer a tu mesa.</p>
-        </div>
-        <div class="video-grid" data-video-grid></div>
+        </details>
       </div>
     </section>
 
-    <section class="section gallery-section" id="galeria" aria-labelledby="gallery-title">
+    <section class="section gallery-section accordion-section" id="galeria" aria-labelledby="gallery-title">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Para compartir</p>
-            <h2 id="gallery-title">Momentos Bocata</h2>
+        <details class="section-accordion" data-accordion>
+          <summary class="accordion-summary reveal">
+            <h2 id="gallery-title">
+              <span class="accordion-eyebrow">Para compartir</span>
+              <span class="accordion-heading-row"><span>Momentos Bocata</span><span class="accordion-icon" aria-hidden="true"></span></span>
+            </h2>
+          </summary>
+          <div class="accordion-panel">
+            <p class="accordion-intro">Una galería preparada para mostrar platos, encuentros y detalles del espacio.</p>
+            <div class="gallery-grid" data-gallery></div>
           </div>
-          <p>Una galería preparada para mostrar platos, encuentros y detalles del espacio.</p>
-        </div>
-        <div class="gallery-grid" data-gallery></div>
+        </details>
       </div>
     </section>
 
-    <section class="section reviews-section" aria-labelledby="reviews-title">
+    <section class="section reviews-section accordion-section" id="resenas" aria-labelledby="reviews-title">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Experiencias</p>
-            <h2 id="reviews-title">Lo que dicen de Bocata</h2>
+        <details class="section-accordion" data-accordion>
+          <summary class="accordion-summary reveal">
+            <h2 id="reviews-title">
+              <span class="accordion-eyebrow">Experiencias</span>
+              <span class="accordion-heading-row"><span>Lo que dicen de Bocata</span><span class="accordion-icon" aria-hidden="true"></span></span>
+            </h2>
+          </summary>
+          <div class="accordion-panel">
+            <p class="accordion-intro">Este espacio quedará reservado para reseñas reales verificadas.</p>
+            <div class="review-grid">
+              <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Muy buena comida y excelente atención.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
+              <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Porciones abundantes y todo muy rico.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
+              <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Un lugar al que dan ganas de volver.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
+            </div>
+            <div class="centered-action"><button class="text-button external-trigger" type="button" data-service="googleReviews">Ver reseñas en Google <span aria-hidden="true">↗</span></button></div>
           </div>
-          <p>Este espacio quedará reservado para reseñas reales verificadas.</p>
-        </div>
-        <div class="review-grid">
-          <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Muy buena comida y excelente atención.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
-          <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Porciones abundantes y todo muy rico.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
-          <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Un lugar al que dan ganas de volver.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
-        </div>
-        <div class="centered-action"><button class="text-button external-trigger" type="button" data-service="googleReviews">Ver reseñas en Google <span aria-hidden="true">↗</span></button></div>
+        </details>
       </div>
     </section>
 

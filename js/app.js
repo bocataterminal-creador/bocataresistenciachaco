@@ -278,6 +278,14 @@
     dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
   }
 
+  function setupAccordions() {
+    document.querySelectorAll("[data-accordion]").forEach((accordion) => {
+      accordion.addEventListener("toggle", () => {
+        if (accordion.open) observeReveals(accordion);
+      });
+    });
+  }
+
   renderFeatured();
   renderFilters();
   renderMenu();
@@ -289,4 +297,5 @@
   setupNavigation();
   setupLightbox();
   setupReveals();
+  setupAccordions();
 })();
