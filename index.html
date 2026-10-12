@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5efe4">
+  <meta name="description" content="Bocata es un espacio gastronómico en Resistencia, Chaco. Descubrí nuestro menú, promociones y formas de hacer tu pedido.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="BOCATA | Resistencia, Chaco">
+  <meta property="og:description" content="Descubrí la propuesta, el menú y las promociones de Bocata en Resistencia, Chaco.">
+  <meta property="og:image" content="assets/images/hero-placeholder.svg">
+  <title>BOCATA | Resistencia, Chaco</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Bocata",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Resistencia",
+        "addressRegion": "Chaco",
+        "addressCountry": "AR"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Bocata, volver al inicio">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>BOCATA</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal" data-nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#promos">Promos</a>
+        <a href="#bocata">Bocata</a>
+        <a href="#galeria">Galería</a>
+        <a href="#ubicacion">Ubicación</a>
+        <button class="button button-small order-trigger" type="button">Pedir</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="container hero-content reveal">
+        <p class="eyebrow light">Resistencia · Chaco</p>
+        <p class="hero-brand">BOCATA</p>
+        <h1 id="hero-title">Comida para disfrutar.</h1>
+        <p class="hero-copy">Sabores abundantes, buena cocina y ese lugar al que siempre dan ganas de volver.</p>
+        <div class="button-row">
+          <a class="button" href="#menu">Ver menú</a>
+          <button class="button button-secondary order-trigger" type="button">Pedir ahora</button>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#favoritos" aria-label="Ir a productos destacados">
+        <span>Descubrí Bocata</span><span aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <section class="section" id="favoritos" aria-labelledby="favoritos-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Para empezar</p>
+            <h2 id="favoritos-title">Los favoritos de Bocata</h2>
+          </div>
+          <p>Una muestra provisoria para evaluar cómo se presentarán los productos más elegidos.</p>
+        </div>
+        <div class="product-grid featured-grid" data-featured-grid aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Elegí tu antojo</p>
+            <h2 id="menu-title">Menú</h2>
+          </div>
+          <p>Productos y precios de muestra. El menú real se incorporará en la próxima etapa.</p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filtrar menú por categoría" data-filters></div>
+        <p class="results-count" data-results-count aria-live="polite"></p>
+        <div class="product-grid menu-grid" data-menu-grid></div>
+        <noscript><p class="notice">Activá JavaScript para visualizar el menú dinámico.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section promo-section" id="promos" aria-labelledby="promos-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Algo especial</p>
+            <h2 id="promos-title">Promos Bocata</h2>
+          </div>
+          <p>Combinaciones provisorias listas para reemplazar por las promociones vigentes.</p>
+        </div>
+        <div class="promo-grid" data-promo-grid></div>
+      </div>
+    </section>
+
+    <section class="section order-section" id="pedir" aria-labelledby="order-title">
+      <div class="container order-layout">
+        <div class="order-intro reveal">
+          <p class="eyebrow light">Simple y directo</p>
+          <h2 id="order-title">Pedí en Bocata</h2>
+          <p>Elegí la modalidad que mejor te quede. Cuando estén disponibles los datos reales, el pedido se iniciará desde acá.</p>
+          <button class="button button-secondary order-trigger" type="button">Abrir WhatsApp</button>
+        </div>
+        <ol class="order-options">
+          <li class="reveal">
+            <span class="step-icon" aria-hidden="true">01</span>
+            <div><h3>WhatsApp</h3><p>Hacé tu pedido directamente por WhatsApp.</p></div>
+          </li>
+          <li class="reveal">
+            <span class="step-icon" aria-hidden="true">02</span>
+            <div><h3>Retiro</h3><p>Pedí con anticipación y retiralo por Bocata.</p></div>
+          </li>
+          <li class="reveal">
+            <span class="step-icon" aria-hidden="true">03</span>
+            <div><h3>Delivery</h3><p>Consultanos las zonas y modalidades disponibles.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section story-section" id="bocata" aria-labelledby="story-title">
+      <div class="container story-layout">
+        <div class="story-copy reveal">
+          <p class="eyebrow">Nuestra esencia</p>
+          <h2 id="story-title">Esto es Bocata</h2>
+          <p>Bocata es un espacio gastronómico en Resistencia pensado para disfrutar buena comida, sabores abundantes y una atención cercana.</p>
+          <p>Nuestra propuesta combina opciones ideales para compartir, almorzar, cenar o darse un gusto, con una cocina simple, sabrosa y preparada para que cada pedido se disfrute de principio a fin.</p>
+          <p>Queremos que Bocata sea ese lugar al que siempre dan ganas de volver: por la comida, por la atención y por esos momentos que se disfrutan mejor alrededor de una mesa.</p>
+        </div>
+        <div class="story-collage reveal" aria-label="Espacios reservados para fotografías del local, el equipo y la cocina">
+          <figure class="story-photo story-photo-main">
+            <img src="assets/images/place-placeholder.svg" alt="Espacio reservado para una fotografía del local" loading="lazy" width="900" height="1100">
+            <figcaption>El local</figcaption>
+          </figure>
+          <figure class="story-photo">
+            <img src="assets/images/team-placeholder.svg" alt="Espacio reservado para una fotografía del equipo" loading="lazy" width="700" height="500">
+            <figcaption>El equipo</figcaption>
+          </figure>
+          <figure class="story-photo">
+            <img src="assets/images/kitchen-placeholder.svg" alt="Espacio reservado para una fotografía de la cocina" loading="lazy" width="700" height="500">
+            <figcaption>La cocina</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Para compartir</p>
+            <h2 id="gallery-title">Momentos Bocata</h2>
+          </div>
+          <p>Una galería preparada para mostrar platos, encuentros y detalles del espacio.</p>
+        </div>
+        <div class="gallery-grid" data-gallery></div>
+      </div>
+    </section>
+
+    <section class="section reviews-section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Experiencias</p>
+            <h2 id="reviews-title">Lo que dicen de Bocata</h2>
+          </div>
+          <p>Este espacio quedará reservado para reseñas reales verificadas.</p>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Muy buena comida y excelente atención.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
+          <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Porciones abundantes y todo muy rico.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
+          <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Un lugar al que dan ganas de volver.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
+        </div>
+        <div class="centered-action"><button class="text-button external-trigger" type="button" data-service="googleReviews">Ver reseñas en Google <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </section>
+
+    <section class="section location-section" id="ubicacion" aria-labelledby="location-title">
+      <div class="container location-layout">
+        <div class="location-copy reveal">
+          <p class="eyebrow">Estamos cerca</p>
+          <h2 id="location-title">Encontranos</h2>
+          <p class="location-place">Resistencia, Chaco, Argentina</p>
+          <dl class="contact-list">
+            <div><dt>Dirección</dt><dd data-address>Próximamente</dd></div>
+            <div><dt>Teléfono</dt><dd data-phone>Próximamente</dd></div>
+            <div><dt>Instagram</dt><dd data-instagram-label>Próximamente</dd></div>
+          </dl>
+          <button class="button external-trigger" type="button" data-service="googleMaps">Cómo llegar</button>
+        </div>
+        <div class="map-placeholder reveal" role="img" aria-label="Espacio reservado para el mapa de ubicación de Bocata">
+          <div class="map-pin" aria-hidden="true"><span>B</span></div>
+          <p>Mapa y dirección exacta<br><strong>próximamente</strong></p>
+        </div>
+        <div class="hours-card reveal" aria-labelledby="hours-title">
+          <div class="hours-header">
+            <h3 id="hours-title">Horarios</h3>
+            <span class="status-badge" aria-label="Estado de apertura pendiente">Estado pendiente</span>
+          </div>
+          <dl data-hours></dl>
+          <p class="hours-note">Los horarios se confirmarán próximamente.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand brand-footer" href="#inicio"><span class="brand-mark" aria-hidden="true">B</span><span>BOCATA</span></a><p>Resistencia · Chaco</p></div>
+      <nav aria-label="Navegación del pie"><a href="#menu">Menú</a><a href="#promos">Promos</a><a href="#ubicacion">Ubicación</a></nav>
+      <nav aria-label="Redes y contacto"><button class="footer-link external-trigger" type="button" data-service="instagram">Instagram</button><button class="footer-link order-trigger" type="button">WhatsApp</button></nav>
+      <div class="footer-meta"><p>© 2026 Bocata. Todos los derechos reservados.</p><p class="development-note">Sitio en desarrollo</p></div>
+    </div>
+  </footer>
+
+  <button class="whatsapp-float order-trigger" type="button" aria-label="Pedir por WhatsApp">
+    <span aria-hidden="true">✦</span><span>Pedir</span>
+  </button>
+
+  <dialog class="lightbox" data-lightbox aria-label="Vista ampliada de la galería">
+    <button class="lightbox-close" type="button" aria-label="Cerrar imagen" data-lightbox-close>×</button>
+    <img src="assets/images/gallery-01.svg" alt="" width="1200" height="900" data-lightbox-image>
+    <p data-lightbox-caption></p>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="data/config.js"></script>
+  <script src="data/menu.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
