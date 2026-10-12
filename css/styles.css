@@ -72,7 +72,7 @@ h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }
 .section-accordion[open] .accordion-icon::after { transform: translate(-50%, -50%) rotate(0deg); }
 .accordion-panel { padding: 0 0 5rem; }
 .accordion-intro { max-width: 40rem; margin-bottom: 2rem; color: var(--color-text-soft); }
-.promo-section .accordion-eyebrow, .video-section .accordion-eyebrow { color: #ffd2be; }
+.promo-section .accordion-eyebrow, .order-section .accordion-eyebrow, .video-section .accordion-eyebrow { color: #ffd2be; }
 .promo-section .accordion-intro, .video-section .accordion-intro { color: rgba(255,255,255,0.7); }
 .accordion-summary:hover .accordion-icon { color: var(--color-accent); }
 

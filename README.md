@@ -78,7 +78,7 @@ Cada producto de `MENU_DATA` en `data/menu.js` sigue esta estructura:
 
 Las promociones se editan en `PROMO_DATA` dentro del mismo archivo.
 
-Las secciones Favoritos, Promos, Esto es Bocata, Videos, Galería y Reseñas se presentan como acordeones cerrados para mantener el recorrido inicial más compacto.
+Las secciones Favoritos, Menú, Promos, Pedidos, Esto es Bocata, Videos, Galería y Reseñas se presentan como acordeones cerrados para mantener el recorrido inicial más compacto.
 
 ## Completar los datos del negocio
 

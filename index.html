@@ -94,19 +94,23 @@
       </div>
     </section>
 
-    <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+    <section class="section menu-section accordion-section" id="menu" aria-labelledby="menu-title">
       <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Elegí tu antojo</p>
-            <h2 id="menu-title">Menú</h2>
+        <details class="section-accordion" data-accordion>
+          <summary class="accordion-summary reveal">
+            <h2 id="menu-title">
+              <span class="accordion-eyebrow">Elegí tu antojo</span>
+              <span class="accordion-heading-row"><span>Menú</span><span class="accordion-icon" aria-hidden="true"></span></span>
+            </h2>
+          </summary>
+          <div class="accordion-panel">
+            <p class="accordion-intro">Productos y precios de muestra. El menú real se incorporará en la próxima etapa.</p>
+            <div class="filter-bar" role="group" aria-label="Filtrar menú por categoría" data-filters></div>
+            <p class="results-count" data-results-count aria-live="polite"></p>
+            <div class="product-grid menu-grid" data-menu-grid></div>
+            <noscript><p class="notice">Activá JavaScript para visualizar el menú dinámico.</p></noscript>
           </div>
-          <p>Productos y precios de muestra. El menú real se incorporará en la próxima etapa.</p>
-        </div>
-        <div class="filter-bar" role="group" aria-label="Filtrar menú por categoría" data-filters></div>
-        <p class="results-count" data-results-count aria-live="polite"></p>
-        <div class="product-grid menu-grid" data-menu-grid></div>
-        <noscript><p class="notice">Activá JavaScript para visualizar el menú dinámico.</p></noscript>
+        </details>
       </div>
     </section>
 
@@ -127,28 +131,36 @@
       </div>
     </section>
 
-    <section class="section order-section" id="pedir" aria-labelledby="order-title">
-      <div class="container order-layout">
-        <div class="order-intro reveal">
-          <p class="eyebrow light">Simple y directo</p>
-          <h2 id="order-title">Pedí en Bocata</h2>
-          <p>Elegí la modalidad que mejor te quede y hacé tu pedido directamente por WhatsApp.</p>
-          <button class="button button-secondary order-trigger" type="button">Abrir WhatsApp</button>
-        </div>
-        <ol class="order-options">
-          <li class="reveal">
-            <span class="step-icon" aria-hidden="true">01</span>
-            <div><h3>WhatsApp</h3><p>Hacé tu pedido directamente por WhatsApp.</p></div>
-          </li>
-          <li class="reveal">
-            <span class="step-icon" aria-hidden="true">02</span>
-            <div><h3>Retiro</h3><p>Pedí con anticipación y retiralo por Bocata.</p></div>
-          </li>
-          <li class="reveal">
-            <span class="step-icon" aria-hidden="true">03</span>
-            <div><h3>Delivery</h3><p>Consultanos las zonas y modalidades disponibles.</p></div>
-          </li>
-        </ol>
+    <section class="section order-section accordion-section" id="pedir" aria-labelledby="order-title">
+      <div class="container">
+        <details class="section-accordion" data-accordion>
+          <summary class="accordion-summary reveal">
+            <h2 id="order-title">
+              <span class="accordion-eyebrow">Simple y directo</span>
+              <span class="accordion-heading-row"><span>Pedí en Bocata</span><span class="accordion-icon" aria-hidden="true"></span></span>
+            </h2>
+          </summary>
+          <div class="accordion-panel order-layout">
+            <div class="order-intro reveal">
+              <p>Elegí la modalidad que mejor te quede y hacé tu pedido directamente por WhatsApp.</p>
+              <button class="button button-secondary order-trigger" type="button">Abrir WhatsApp</button>
+            </div>
+            <ol class="order-options">
+              <li class="reveal">
+                <span class="step-icon" aria-hidden="true">01</span>
+                <div><h3>WhatsApp</h3><p>Hacé tu pedido directamente por WhatsApp.</p></div>
+              </li>
+              <li class="reveal">
+                <span class="step-icon" aria-hidden="true">02</span>
+                <div><h3>Retiro</h3><p>Pedí con anticipación y retiralo por Bocata.</p></div>
+              </li>
+              <li class="reveal">
+                <span class="step-icon" aria-hidden="true">03</span>
+                <div><h3>Delivery</h3><p>Consultanos las zonas y modalidades disponibles.</p></div>
+              </li>
+            </ol>
+          </div>
+        </details>
       </div>
     </section>
 
