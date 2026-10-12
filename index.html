@@ -70,12 +70,12 @@
           <button class="button button-secondary order-trigger" type="button">Pedir ahora</button>
         </div>
       </div>
-      <a class="scroll-cue" href="#favoritos" aria-label="Ir a productos destacados">
+      <a class="scroll-cue" href="#menu" aria-label="Ir al menú">
         <span>Descubrí Bocata</span><span aria-hidden="true">↓</span>
       </a>
     </section>
 
-    <section class="section accordion-section" id="favoritos" aria-labelledby="favoritos-title">
+    <section class="section accordion-section" id="favoritos" aria-labelledby="favoritos-title" hidden data-section-status="temporalmente-oculta">
       <div class="container">
         <details class="section-accordion" data-accordion>
           <summary class="accordion-summary reveal">
@@ -196,7 +196,7 @@
       </div>
     </section>
 
-    <section class="section video-section accordion-section" id="videos" aria-labelledby="videos-title">
+    <section class="section video-section accordion-section" id="videos" aria-labelledby="videos-title" hidden data-section-status="temporalmente-oculta">
       <div class="container">
         <details class="section-accordion" data-accordion>
           <summary class="accordion-summary reveal">
@@ -230,28 +230,6 @@
       </div>
     </section>
 
-    <section class="section reviews-section accordion-section" id="resenas" aria-labelledby="reviews-title">
-      <div class="container">
-        <details class="section-accordion" data-accordion>
-          <summary class="accordion-summary reveal">
-            <h2 id="reviews-title">
-              <span class="accordion-eyebrow">Experiencias</span>
-              <span class="accordion-heading-row"><span>Lo que dicen de Bocata</span><span class="accordion-icon" aria-hidden="true"></span></span>
-            </h2>
-          </summary>
-          <div class="accordion-panel">
-            <p class="accordion-intro">Este espacio quedará reservado para reseñas reales verificadas.</p>
-            <div class="review-grid">
-              <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Muy buena comida y excelente atención.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
-              <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Porciones abundantes y todo muy rico.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
-              <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Un lugar al que dan ganas de volver.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
-            </div>
-            <div class="centered-action"><button class="text-button external-trigger" type="button" data-service="googleReviews">Ver reseñas en Google <span aria-hidden="true">↗</span></button></div>
-          </div>
-        </details>
-      </div>
-    </section>
-
     <section class="section location-section" id="ubicacion" aria-labelledby="location-title">
       <div class="container location-layout">
         <div class="location-copy reveal">
@@ -278,6 +256,28 @@
           <dl data-hours></dl>
           <p class="hours-note">Los horarios se confirmarán próximamente.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section reviews-section accordion-section" id="resenas" aria-labelledby="reviews-title">
+      <div class="container">
+        <details class="section-accordion" data-accordion>
+          <summary class="accordion-summary reveal">
+            <h2 id="reviews-title">
+              <span class="accordion-eyebrow">Experiencias</span>
+              <span class="accordion-heading-row"><span>Lo que dicen de Bocata</span><span class="accordion-icon" aria-hidden="true"></span></span>
+            </h2>
+          </summary>
+          <div class="accordion-panel">
+            <p class="accordion-intro">Este espacio quedará reservado para reseñas reales verificadas.</p>
+            <div class="review-grid">
+              <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Muy buena comida y excelente atención.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
+              <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Porciones abundantes y todo muy rico.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
+              <article class="review-card reveal"><p class="stars" aria-label="Cinco estrellas">★★★★★</p><blockquote>“Un lugar al que dan ganas de volver.”</blockquote><p class="placeholder-label">Opinión provisoria</p></article>
+            </div>
+            <div class="centered-action"><button class="text-button external-trigger" type="button" data-service="googleReviews">Ver reseñas en Google <span aria-hidden="true">↗</span></button></div>
+          </div>
+        </details>
       </div>
     </section>
   </main>

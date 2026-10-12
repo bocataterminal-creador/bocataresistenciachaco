@@ -80,7 +80,7 @@ Las promociones se editan en `PROMO_DATA` dentro del mismo archivo.
 
 Las secciones Favoritos, Menú, Promos, Pedidos, Esto es Bocata, Videos, Galería y Reseñas se presentan como acordeones cerrados para mantener el recorrido inicial más compacto.
 
-Las secciones `Esto es Bocata` y `Momentos Bocata` permanecen temporalmente ocultas mediante el atributo `hidden`; su contenido se conserva para reactivarlo más adelante.
+Las secciones `Los favoritos de Bocata`, `Esto es Bocata`, `Conocé nuestra propuesta` y `Momentos Bocata` permanecen temporalmente ocultas mediante el atributo `hidden`; su contenido se conserva para reactivarlo más adelante. La sección de reseñas se ubica debajo de `Encontranos`.
 
 ## Completar los datos del negocio
 
