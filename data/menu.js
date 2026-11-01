@@ -5,12 +5,13 @@
 window.MENU_CATEGORIES = [
   { id: "todos", label: "Todos" },
   { id: "congelados", label: "CONGELADOS" },
-  { id: "bocatas", label: "Bocatas" },
-  { id: "hamburguesas", label: "Hamburguesas" },
-  { id: "compartir", label: "Para compartir" },
-  { id: "papas", label: "Papas" },
-  { id: "bebidas", label: "Bebidas" },
-  { id: "postres", label: "Postres" }
+  { id: "sandwiches-miga", label: "Sándwiches de miga" },
+  { id: "bocatas", label: "Bocatas", hidden: true },
+  { id: "hamburguesas", label: "Hamburguesas", hidden: true },
+  { id: "compartir", label: "Para compartir", hidden: true },
+  { id: "papas", label: "Papas", hidden: true },
+  { id: "bebidas", label: "Bebidas", hidden: true },
+  { id: "postres", label: "Postres", hidden: true }
 ];
 
 window.MENU_DATA = [

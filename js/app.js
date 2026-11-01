@@ -5,7 +5,7 @@
 
   const config = window.BOCATA_CONFIG || {};
   const products = Array.isArray(window.MENU_DATA) ? window.MENU_DATA : [];
-  const categories = Array.isArray(window.MENU_CATEGORIES) ? window.MENU_CATEGORIES : [];
+  const categories = (Array.isArray(window.MENU_CATEGORIES) ? window.MENU_CATEGORIES : []).filter((category) => !category.hidden);
   const promos = Array.isArray(window.PROMO_DATA) ? window.PROMO_DATA : [];
   const gallery = Array.isArray(window.GALLERY_DATA) ? window.GALLERY_DATA : [];
   const videos = Array.isArray(window.VIDEO_DATA) ? window.VIDEO_DATA : [];
@@ -77,8 +77,8 @@
     const grid = document.querySelector("[data-menu-grid]");
     const count = document.querySelector("[data-results-count]");
     if (!grid) return;
-    const filtered = products.filter((product) => product.available && (category === "todos" || product.category === category));
-    grid.innerHTML = filtered.map(productCard).join("");
+    const filtered = products.filter((product) => product.available && categories.some((item) => item.id === product.category) && (category === "todos" || product.category === category));
+    grid.innerHTML = filtered.length ? filtered.map(productCard).join("") : '<p class="notice">Todavía no hay productos cargados en esta categoría.</p>';
     if (count) count.textContent = `${filtered.length} ${filtered.length === 1 ? "opción disponible" : "opciones disponibles"}`;
     observeReveals(grid);
   }
