@@ -15,10 +15,36 @@
 
   function productCard(product) {
     const tag = product.tag ? `<span class="product-tag">${escapeHtml(product.tag)}</span>` : "";
+    const image = `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.imageAlt)}" loading="lazy" width="800" height="${product.category === "congelados" ? "1200" : "600"}">`;
+    const media = product.category === "congelados"
+      ? `<button class="product-image-button" type="button" data-product-image="${escapeHtml(product.id)}" aria-label="Ampliar imagen de ${escapeHtml(product.name)}">${image}<span class="image-zoom-hint">Ampliar imagen +</span></button>`
+      : image;
+    if (product.category === "congelados") {
+      const ingredients = Array.isArray(product.ingredients) && product.ingredients.length
+        ? `<ul class="product-ingredients">${product.ingredients.map((ingredient) => `<li>${escapeHtml(ingredient)}</li>`).join("")}</ul>`
+        : "";
+      return `
+        <article class="product-card reveal product-card-frozen" data-product-id="${escapeHtml(product.id)}">
+          <div class="product-body">
+            <h3>${escapeHtml(product.name)}</h3>
+            <p class="product-description">${escapeHtml(product.description)}</p>
+            <div class="product-footer">
+              <p class="product-price">${escapeHtml(product.price)}</p>
+              <button class="button order-trigger" type="button" data-product="${escapeHtml(product.name)}">Pedir</button>
+            </div>
+            ${ingredients}
+            <p class="product-category">${escapeHtml(categoryLabel(product.category))}</p>
+          </div>
+          <div class="product-media">
+            ${media}
+            ${tag}
+          </div>
+        </article>`;
+    }
     return `
       <article class="product-card reveal${product.category === "congelados" ? " product-card-frozen" : ""}" data-product-id="${escapeHtml(product.id)}">
         <div class="product-media">
-          <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.imageAlt)}" loading="lazy" width="800" height="600">
+          ${media}
           ${tag}
         </div>
         <div class="product-body">
@@ -162,6 +188,12 @@
 
   function bindDelegatedActions() {
     document.addEventListener("click", (event) => {
+      const imageButton = event.target.closest("[data-product-image]");
+      if (imageButton) {
+        const product = products.find((item) => item.id === imageButton.dataset.productImage);
+        if (product) openProductImage(product);
+        return;
+      }
       const filter = event.target.closest("[data-category]");
       if (filter) {
         document.querySelectorAll("[data-category]").forEach((button) => {
@@ -276,6 +308,42 @@
     if (!dialog || !close) return;
     close.addEventListener("click", () => dialog.close());
     dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
+  }
+
+
+  let productViewer;
+  function openProductImage(product) {
+    if (!productViewer) {
+      productViewer = document.createElement("dialog");
+      productViewer.className = "product-viewer";
+      productViewer.setAttribute("aria-labelledby", "product-viewer-title");
+      productViewer.innerHTML = `<div class="product-viewer-header"><h2 id="product-viewer-title"></h2><button type="button" data-viewer-close aria-label="Cerrar imagen">Cerrar ×</button></div>
+        <div class="product-viewer-viewport" tabindex="0" aria-label="Imagen ampliada. Usá las barras de desplazamiento para recorrerla."><div class="product-viewer-canvas"><img alt=""></div></div>
+        <div class="product-viewer-controls"><label for="product-image-zoom">Zoom</label><input id="product-image-zoom" type="range" min="100" max="250" step="10" value="100"><output for="product-image-zoom">100%</output><button type="button" data-viewer-reset>Ver completa</button></div>`;
+      document.body.append(productViewer);
+      productViewer.querySelector("[data-viewer-close]").addEventListener("click", () => productViewer.close());
+      productViewer.addEventListener("click", (event) => { if (event.target === productViewer) productViewer.close(); });
+      const slider = productViewer.querySelector("input");
+      slider.addEventListener("input", () => setProductZoom(Number(slider.value)));
+      productViewer.querySelector("[data-viewer-reset]").addEventListener("click", () => setProductZoom(100));
+    }
+    productViewer.querySelector("h2").textContent = product.name;
+    const image = productViewer.querySelector("img");
+    image.src = product.image;
+    image.alt = product.imageAlt;
+    setProductZoom(100);
+    productViewer.showModal();
+  }
+
+  function setProductZoom(value) {
+    productViewer.querySelector("input").value = String(value);
+    productViewer.querySelector("output").textContent = value + "%";
+    const canvas = productViewer.querySelector(".product-viewer-canvas");
+    canvas.style.width = value + "%";
+    canvas.style.height = value + "%";
+    const viewport = productViewer.querySelector(".product-viewer-viewport");
+    viewport.scrollTop = 0;
+    viewport.scrollLeft = (viewport.scrollWidth - viewport.clientWidth) / 2;
   }
 
   function setupAccordions() {
