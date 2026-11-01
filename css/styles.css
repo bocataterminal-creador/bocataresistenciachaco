@@ -321,3 +321,34 @@ h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }
 .text-button, .footer-link { min-height: 2.75rem; display: inline-flex; align-items: center; }
 button:disabled, .button:disabled { color: var(--color-text-soft); background: var(--color-surface-alt); border-color: var(--color-border); box-shadow: none; opacity: .65; cursor: not-allowed; transform: none; }
 .product-viewer input[type="range"] { accent-color: var(--color-accent); }
+
+/* Subtle chalkboard details: decoration only, with no overlay on text or photos. */
+.menu-section, .reviews-section, .location-section {
+  background-image: radial-gradient(circle, rgba(240,237,230,.025) .6px, transparent .8px), radial-gradient(circle, rgba(216,181,141,.02) .5px, transparent .8px);
+  background-size: 13px 17px, 23px 19px;
+  background-position: 0 0, 7px 9px;
+}
+.accordion-eyebrow::before {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1px;
+  margin-right: .7rem;
+  vertical-align: middle;
+  content: "";
+  background: var(--color-accent);
+  opacity: .7;
+}
+.location-copy h2::after {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin-top: 1rem;
+  border-radius: 50%;
+  content: "";
+  background: var(--color-accent);
+  opacity: .75;
+}
+.site-footer { border-top: 1px solid rgba(216,181,141,.25); }
+@media (forced-colors: active) {
+  .menu-section, .reviews-section, .location-section { background-image: none; }
+}
