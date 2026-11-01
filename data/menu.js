@@ -28,6 +28,45 @@ window.MENU_DATA = [
     ingredients: [], variants: [], sizes: [], extras: [], promotion: null, stock: null
   },
   {
+    id: "empanadas-acelga-congelados",
+    name: "EMPANADAS DE ACELGA",
+    description: "Empanadas de acelga congeladas.",
+    category: "congelados",
+    price: "Consultar precio",
+    image: "assets/images/empanadas-acelga-congelados.jpg",
+    imageAlt: "Empanadas de acelga congeladas de Bocata",
+    available: true,
+    featured: false,
+    tag: "",
+    ingredients: [], variants: [], sizes: [], extras: [], promotion: null, stock: null
+  },
+  {
+    id: "deditos-pollo-congelados",
+    name: "DEDITOS DE POLLO",
+    description: "Deditos de pollo congelados.",
+    category: "congelados",
+    price: "Consultar precio",
+    image: "assets/images/deditos-pollo-congelados.jpg",
+    imageAlt: "Deditos de pollo congelados de Bocata",
+    available: true,
+    featured: false,
+    tag: "",
+    ingredients: [], variants: [], sizes: [], extras: [], promotion: null, stock: null
+  },
+  {
+    id: "estofado-osobuco-congelados",
+    name: "ESTOFADO DE OSOBUCO",
+    description: "Estofado de osobuco congelado.",
+    category: "congelados",
+    price: "Consultar precio",
+    image: "assets/images/estofado-osobuco-congelados.jpg",
+    imageAlt: "Estofado de osobuco congelado de Bocata",
+    available: true,
+    featured: false,
+    tag: "",
+    ingredients: [], variants: [], sizes: [], extras: [], promotion: null, stock: null
+  },
+  {
     id: "demo-bocata-especial",
     name: "Bocata Especial",
     description: "Descripción provisoria del producto y sus ingredientes principales.",

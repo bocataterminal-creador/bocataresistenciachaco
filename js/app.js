@@ -16,7 +16,7 @@
   function productCard(product) {
     const tag = product.tag ? `<span class="product-tag">${escapeHtml(product.tag)}</span>` : "";
     return `
-      <article class="product-card reveal" data-product-id="${escapeHtml(product.id)}">
+      <article class="product-card reveal${product.category === "congelados" ? " product-card-frozen" : ""}" data-product-id="${escapeHtml(product.id)}">
         <div class="product-media">
           <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.imageAlt)}" loading="lazy" width="800" height="600">
           ${tag}
