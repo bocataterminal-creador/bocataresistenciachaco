@@ -68,6 +68,19 @@ window.MENU_DATA = [
     ingredients: [], variants: [], sizes: [], extras: [], promotion: null, stock: null
   },
   {
+    id: "chipa-congelados",
+    name: "CHIPÁ CONGELADOS",
+    description: "Chipá congelados.",
+    category: "congelados",
+    price: "Consultar precio",
+    image: "assets/images/chipa-congelados.jpg",
+    imageAlt: "Chipá congelados de Bocata",
+    available: true,
+    featured: false,
+    tag: "",
+    ingredients: [], variants: [], sizes: [], extras: [], promotion: null, stock: null
+  },
+  {
     id: "demo-bocata-especial",
     name: "Bocata Especial",
     description: "Descripción provisoria del producto y sus ingredientes principales.",
