@@ -20,6 +20,8 @@
       ? `<button class="product-image-button" type="button" data-product-image="${escapeHtml(product.id)}" aria-label="Ampliar imagen de ${escapeHtml(product.name)}">${image}<span class="image-zoom-hint">Ampliar imagen +</span></button>`
       : image;
     if (product.category === "congelados") {
+      const presentations = Array.isArray(product.variants) && product.variants.length ? product.variants : [{ label: "", price: product.price }];
+      const prices = presentations.map((variant) => `<div class="product-footer"><p class="product-price">${variant.label ? `<span class="product-presentation">${escapeHtml(variant.label)}</span>` : ""}${escapeHtml(variant.price)}</p><button class="button order-trigger" type="button" data-product="${escapeHtml(product.name + (variant.label ? " — " + variant.label : ""))}">Pedir</button></div>`).join("");
       const ingredients = Array.isArray(product.ingredients) && product.ingredients.length
         ? `<ul class="product-ingredients">${product.ingredients.map((ingredient) => `<li>${escapeHtml(ingredient)}</li>`).join("")}</ul>`
         : "";
@@ -28,10 +30,7 @@
           <div class="product-body">
             <h3>${escapeHtml(product.name)}</h3>
             <p class="product-description">${escapeHtml(product.description)}</p>
-            <div class="product-footer">
-              <p class="product-price">${escapeHtml(product.price)}</p>
-              <button class="button order-trigger" type="button" data-product="${escapeHtml(product.name)}">Pedir</button>
-            </div>
+            ${prices}
             ${ingredients}
             <p class="product-category">${escapeHtml(categoryLabel(product.category))}</p>
           </div>
