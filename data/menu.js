@@ -1,9 +1,10 @@
 /*
- * Contenido demostrativo. TODO: reemplazar productos, promociones y precios por datos reales.
+ * Incluye productos confirmados y contenido demostrativo pendiente de reemplazo.
  * Los campos ingredients, variants, sizes, extras, promotion y stock quedan previstos para fases futuras.
  */
 window.MENU_CATEGORIES = [
   { id: "todos", label: "Todos" },
+  { id: "congelados", label: "CONGELADOS" },
   { id: "bocatas", label: "Bocatas" },
   { id: "hamburguesas", label: "Hamburguesas" },
   { id: "compartir", label: "Para compartir" },
@@ -13,6 +14,19 @@ window.MENU_CATEGORIES = [
 ];
 
 window.MENU_DATA = [
+  {
+    id: "empanadas-pollo-congelados",
+    name: "EMPANADAS DE POLLO",
+    description: "Empanadas de pollo congeladas.",
+    category: "congelados",
+    price: "Consultar precio",
+    image: "assets/images/empanadas-pollo-congelados.jpg",
+    imageAlt: "Empanadas de pollo congeladas de Bocata",
+    available: true,
+    featured: false,
+    tag: "",
+    ingredients: [], variants: [], sizes: [], extras: [], promotion: null, stock: null
+  },
   {
     id: "demo-bocata-especial",
     name: "Bocata Especial",
